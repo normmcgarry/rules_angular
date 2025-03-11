@@ -40,4 +40,7 @@ def bundle_type_declaration(
         arguments = [args],
         execution_requirements = {"supports-workers": "1"},
         progress_message = "Bundling types (%s)" % entry_point.short_path,
+        env = {
+            "BAZEL_BINDIR": ".",
+        },
     )
