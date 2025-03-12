@@ -1,5 +1,5 @@
 load("@aspect_rules_ts//ts:defs.bzl", "ts_project")
-load("//ng_package:angular_package_format.bzl", "angular_package_format")
+load("//ng_package/rollup:index.bzl", "ng_package_rollup")
 
 ts_project(
     name = "app",
@@ -11,8 +11,8 @@ ts_project(
 )
 
 
-angular_package_format(
-    name = "pkg",
+ng_package_rollup(
+    name = "bundle",
     srcs = [
         ":app",
     ],
