@@ -6,7 +6,7 @@ settings:
 
 patchedDependencies:
   '@angular/compiler-cli@19.0.1':
-    hash: hao23mk7q4o74zeeqtxamtqzyi
+    hash: 2d009472d8dfb8bdcd415935e96a4547448920c21460a057350a65b138f0ab3c
     path: patches/@angular__compiler-cli.patch
 
 importers:
@@ -19,7 +19,7 @@ importers:
     devDependencies:
       '@angular/compiler-cli':
         specifier: ^19.0.1
-        version: 19.0.1(patch_hash=hao23mk7q4o74zeeqtxamtqzyi)(@angular/compiler@19.0.1(@angular/core@19.0.1(rxjs@7.8.1)(zone.js@0.15.0)))(typescript@5.6.3)
+        version: 19.0.1(patch_hash=2d009472d8dfb8bdcd415935e96a4547448920c21460a057350a65b138f0ab3c)(@angular/compiler@19.0.1(@angular/core@19.0.1(rxjs@7.8.1)(zone.js@0.15.0)))(typescript@5.8.2)
       '@angular/core':
         specifier: ^19.0.1
         version: 19.0.1(rxjs@7.8.1)(zone.js@0.15.0)
@@ -58,13 +58,13 @@ importers:
         version: 4.27.4
       rollup-plugin-dts:
         specifier: 6.1.1
-        version: 6.1.1(rollup@4.27.4)(typescript@5.6.3)
+        version: 6.1.1(rollup@4.27.4)(typescript@5.8.2)
       tinyglobby:
         specifier: 0.2.12
         version: 0.2.12
       typescript:
-        specifier: 5.6.3
-        version: 5.6.3
+        specifier: 5.8.2
+        version: 5.8.2
 
 packages:
 
@@ -706,8 +706,8 @@ packages:
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
-  typescript@5.6.3:
-    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
+  typescript@5.8.2:
+    resolution: {integrity: sha512-aJn6wq13/afZp/jT9QZmwEjDqqvSGp1VT5GVg+f/t6/oVyrgXM6BY1h9BRh/O5p3PlUPAe+WuiEZOmb/49RqoQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -749,7 +749,7 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@angular/compiler-cli@19.0.1(patch_hash=hao23mk7q4o74zeeqtxamtqzyi)(@angular/compiler@19.0.1(@angular/core@19.0.1(rxjs@7.8.1)(zone.js@0.15.0)))(typescript@5.6.3)':
+  '@angular/compiler-cli@19.0.1(patch_hash=2d009472d8dfb8bdcd415935e96a4547448920c21460a057350a65b138f0ab3c)(@angular/compiler@19.0.1(@angular/core@19.0.1(rxjs@7.8.1)(zone.js@0.15.0)))(typescript@5.8.2)':
     dependencies:
       '@angular/compiler': 19.0.1(@angular/core@19.0.1(rxjs@7.8.1)(zone.js@0.15.0))
       '@babel/core': 7.26.0
@@ -759,7 +759,7 @@ snapshots:
       reflect-metadata: 0.2.2
       semver: 7.6.3
       tslib: 2.8.1
-      typescript: 5.6.3
+      typescript: 5.8.2
       yargs: 17.7.2
     transitivePeerDependencies:
       - supports-color
@@ -1246,11 +1246,11 @@ snapshots:
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
 
-  rollup-plugin-dts@6.1.1(rollup@4.27.4)(typescript@5.6.3):
+  rollup-plugin-dts@6.1.1(rollup@4.27.4)(typescript@5.8.2):
     dependencies:
       magic-string: 0.30.17
       rollup: 4.27.4
-      typescript: 5.6.3
+      typescript: 5.8.2
     optionalDependencies:
       '@babel/code-frame': 7.26.2
 
@@ -1351,7 +1351,7 @@ snapshots:
 
   tslib@2.8.1: {}
 
-  typescript@5.6.3: {}
+  typescript@5.8.2: {}
 
   undici-types@6.20.0: {}
 
