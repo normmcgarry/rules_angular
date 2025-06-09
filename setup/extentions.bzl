@@ -23,7 +23,21 @@ alias(
 )
 """
 
-def _deps_impl(module_ctx):
+_expose_deps = repository_rule(
+    implementation = _expose_deps_impl,
+    attrs = _angular_deps_attrs(),
+)
+
+def _expose_deps_impl(ctx):
+    ctx.file(
+        "BUILD.bazel",
+        _BUILD_TEMPLATE.format(
+            angular_compiler_cli = rctx.attr.angular_compiler_cli,
+            typescript = rctx.attr.typescript,
+        ),
+    )
+
+def _deps_impl(unused_module_ctx):
     npm_translate_lock(
         name = "rules_angular_npm",
         npmrc = "//:.npmrc",
@@ -37,19 +51,16 @@ def _deps_impl(module_ctx):
 
     npm_repositories()
 
-    module_ctx.file(
-        "BUILD.bazel",
-        _BUILD_TEMPLATE.format(
-            angular_compiler_cli = rctx.attr.angular_compiler_cli,
-            typescript = rctx.attr.typescript,
-        ),
+    _expose_deps(
+        name = "rules_angular_configurable_deps",
+        angular_compiler_cli = rctx.attr.angular_compiler_cli,
+        typescript = rctx.attr.typescript,
     )
 
 def _angular_deps_attrs():
     attrs = dict()
 
     # Add macro attrs that aren't in the rule attrs.
-    attrs["name"] = attr.string()
     attrs["angular_compiler_cli"] = attr.label(
         mandatory = True,
         doc = "Label pointing to the `@angular/compiler-cli` package.",
